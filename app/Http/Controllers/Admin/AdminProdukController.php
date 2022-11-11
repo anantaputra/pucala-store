@@ -20,7 +20,7 @@ class AdminProdukController extends Controller
     {
         $brand = Brand::all();
         $kategori = Kategori::all();
-        return view('admin.kategori.tambah', compact('brand', 'kategori'));
+        return view('admin.produk.tambah', compact('brand', 'kategori'));
     }
 
     public function simpan(Request $request)
