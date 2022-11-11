@@ -27,6 +27,6 @@ class AdminKategoriController extends Controller
         $kategori->brand_id = $request->brand;
         $kategori->nama_kategori = $request->nama;
         $kategori->save();
-        return redirect()->route('admin.brand');
+        return redirect()->route('admin.kategori');
     }
 }
