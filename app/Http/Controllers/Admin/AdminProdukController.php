@@ -36,9 +36,9 @@ class AdminProdukController extends Controller
         if($request->hasFile('gambar')){
             $filename = rand() . $request->file('gambar')->getClientOriginalName();
             $request->file('gambar')->move(public_path() . '/produk', $filename);
-            $paket->gambar = $filename;
+            $produk->gambar = $filename;
             $produk->save();
-            return redirect()->route('admin.kategori');
+            return redirect()->route('admin.produk');
         }
     }
 }
