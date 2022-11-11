@@ -19,10 +19,6 @@ Route::get('/', function () {
 });
 
 // admin
-Route::prefix('admin')->group(function(){
-    Route::get('/', function() {
-        return view('pages.home');
-    });
-});
+Route::get('admin', [AdminHomeController::class, 'index']);
 
 Auth::routes();
