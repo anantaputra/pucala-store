@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid py-4">
-    <form action="{{ route('admin.produk.simpan') }}" method="post">
+    <form action="{{ route('admin.produk.simpan') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="brand" class="form-label">Brand</label>
