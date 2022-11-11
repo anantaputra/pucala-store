@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
@@ -21,6 +20,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // admin
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
     Route::get('dashboard', [AdminHomeController::class, 'index'])->name('admin.dashboard');
-})
+});
 
 Auth::routes();
