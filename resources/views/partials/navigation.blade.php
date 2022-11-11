@@ -8,7 +8,15 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links">
-                <a href="#">Sign in</a>
+                @auth
+                <form action="{{ route('logout') }}" method="post" id="form-logout">
+                    @csrf
+                </form>
+                <a onclick="document.querySelector('#form-logout').submit()">Logout</a>
+                @endauth
+                @guest
+                <a href="{{ route('login') }}">Sign in</a>
+                @endguest
                 <a href="#">FAQs</a>
             </div>
             <div class="offcanvas__top__hover">
