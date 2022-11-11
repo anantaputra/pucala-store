@@ -40,7 +40,9 @@
                         <td>{{ $item->kategori->nama_kategori }}</td>
                         <td>{{ $item->kategori->brand->nama_brand }}</td>
                         <td>Rp{{ number_format($item->harga, 0, 0, '.') }}</td>
-                        <td></td>
+                        <td>
+                          <img src="{{ asset('produk/'.$item->gambar) }}" alt="" class="w-25">
+                        </td>
                         <td></td>
                     </tr>
                     @php
