@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminBrandController;
 use App\Http\Controllers\Admin\AdminKategoriController;
+use App\Http\Controllers\Admin\AdminProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
         Route::get('/', [AdminKategoriController::class, 'index'])->name('admin.kategori');
         Route::get('tambah', [AdminKategoriController::class, 'tambah'])->name('admin.kategori.tambah');
         Route::post('simpan/', [AdminKategoriController::class, 'simpan'])->name('admin.kategori.simpan');
+    });
+    Route::prefix('produk')->group(function(){
+        Route::get('/', [AdminProdukController::class, 'index'])->name('admin.produk');
+        Route::get('tambah', [AdminProdukController::class, 'tambah'])->name('admin.produk.tambah');
+        Route::post('simpan/', [AdminProdukController::class, 'simpan'])->name('admin.produk.simpan');
     });
 });
 
