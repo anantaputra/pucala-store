@@ -18,11 +18,11 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Auth::routes();
-
 // admin
 Route::prefix('admin')->group(function(){
     Route::get('/', function() {
-        return view('layouts.admin');
+        return view('pages.home');
     });
 });
+
+Auth::routes();
