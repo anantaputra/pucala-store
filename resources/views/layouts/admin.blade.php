@@ -8,14 +8,14 @@
       <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <!-- Nucleo Icons -->
-    <link href="{{ asset('css/nucleo-icons.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <link id="pagestyle" href="{{ asset('css/material-dashboard.css?v=3.0.0') }}" rel="stylesheet" />
+    <link id="pagestyle" href="{{ asset('admin/css/material-dashboard.css?v=3.0.0') }}" rel="stylesheet" />
 
     @yield('css')
     <title>Admin</title>
@@ -26,11 +26,11 @@
     @yield('content')
     
     <!--   Core JS Files   -->
-    <script src="{{ asset('js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
+    <script src="{{ asset('admin/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('admin/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/smooth-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/chartjs.min.js') }}"></script>
     <script>
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -290,7 +290,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{ asset('js/material-dashboard.min.js?v=3.0.0') }}"></script>
+    <script src="{{ asset('admin/js/material-dashboard.min.js?v=3.0.0') }}"></script>
     @yield('js')
 </body>
 </html>
