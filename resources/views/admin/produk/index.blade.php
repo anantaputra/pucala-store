@@ -36,15 +36,12 @@
                     @foreach($produk as $item)
                     <tr>
                         <td>{{ $no; }}</td>
-                        <td>{{ $item->nama_brand }}</td>
-                        <td>{{ $item->status }}</td>
-                        <td>
-                            @if($item->status == 'on')
-                            <a class="btn btn-danger" href="{{ route('admin.brand.matikan', ['id' => $item->id]) }}" role="button">Matikan</a>
-                            @else 
-                            <a class="btn btn-primary" href="{{ route('admin.brand.matikan', ['id' => $item->id]) }}" role="button">Hidupkan</a>
-                            @endif
-                        </td>
+                        <td>{{ $item->nama }}</td>
+                        <td>{{ $item->kategori->nama_kategori }}</td>
+                        <td>{{ $item->kategori->brand->nama_brand }}</td>
+                        <td>Rp{{ number_format($item->harga, 0, 0, '.') }}</td>
+                        <td>{{  }}</td>
+                        <td>{{  }}</td>
                     </tr>
                     @php
                         $no++;
