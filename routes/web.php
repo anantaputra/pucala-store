@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminBrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // admin
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
     Route::get('dashboard', [AdminHomeController::class, 'index'])->name('admin.dashboard');
+    Route::prefix('brand')->group(function(){
+        Route::get('/', [AdminBrandController::class, 'index'])->name('admin.brand');
+    });
 });
 
 Auth::routes();
