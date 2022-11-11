@@ -22,5 +22,7 @@ Auth::routes();
 
 // admin
 Route::prefix('admin')->group(function(){
-    Route::get('/', [AdminHomeController::class, 'index']);
+    Route::get('/', function() {
+        return view('layouts.admin');
+    });
 });
