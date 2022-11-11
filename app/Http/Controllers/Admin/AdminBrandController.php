@@ -10,7 +10,8 @@ class AdminBrandController extends Controller
 {
     public function index()
     {
-        return view('admin.brand.index');
+        $brand = Brand::all();
+        return view('admin.brand.index', compact('brand'));
     }
 
     public function tambah()
