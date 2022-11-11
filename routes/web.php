@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\AdminHomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // admin
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
     Route::get('dashboard', [AdminHomeController::class, 'index'])->name('admin.dashboard');
 })
 
