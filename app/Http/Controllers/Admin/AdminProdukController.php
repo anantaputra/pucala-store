@@ -12,7 +12,7 @@ class AdminProdukController extends Controller
 {
     public function index()
     {
-        $kategori = Produk::all();
+        $produk = Produk::all();
         return view('admin.produk.index', compact('produk'));
     }
 
