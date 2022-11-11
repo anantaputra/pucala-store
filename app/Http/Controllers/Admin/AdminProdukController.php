@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Brand;
+use App\Models\Kategori;
+use App\Models\Produk;
 
 class AdminProdukController extends Controller
 {
