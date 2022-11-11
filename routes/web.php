@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 // admin
-Route::get('admin', [AdminHomeController::class, 'index']);
+Route::get('admin/dashboard', [AdminHomeController::class, 'index']);
 
 Auth::routes();
