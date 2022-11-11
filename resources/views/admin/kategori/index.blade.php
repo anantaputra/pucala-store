@@ -7,10 +7,10 @@
           <div class="card my-4">
             <div class="card-header d-flex justify-content-between p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize p-3">Daftar Brands</h6>
+                <h6 class="text-white text-capitalize p-3">Daftar Kategori</h6>
               </div>
               <div>
-                <a href="{{ route('admin.brand.tambah') }}" role="button" class="btn btn-primary">Tambah (+)</a>
+                <a href="{{ route('admin.kategori.tambah') }}" role="button" class="btn btn-primary">Tambah (+)</a>
               </div>
             </div>
             <div class="card-body px-0 pb-2">
@@ -19,6 +19,7 @@
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Kategori</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Brand</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
@@ -26,13 +27,14 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @if(isset($brand))
+                    @if(isset($kategori))
                     @php
                         $no = 1;
                     @endphp
-                    @foreach($brand as $item)
+                    @foreach($kategori as $item)
                     <tr>
                         <td>{{ $no; }}</td>
+                        <td>{{ $item->nama_kategori }}</td>
                         <td>{{ $item->nama_brand }}</td>
                         <td>{{ $item->status }}</td>
                         <td>

@@ -27,6 +27,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
         Route::post('simpan', [AdminBrandController::class, 'simpan'])->name('admin.brand.simpan');
         Route::get('matikan/{id}', [AdminBrandController::class, 'toogle'])->name('admin.brand.matikan');
     });
+    Route::prefix('kategori')->group(function(){
+        Route::get('/', [AdminKategoriController::class, 'index'])->name('admin.kategori');
+        Route::get('tambah', [AdminKategoriController::class, 'tambah'])->name('admin.kategori.tambah');
+        Route::post('simpan/', [AdminKategoriController::class, 'simpan'])->name('admin.kategori.simpan');
+    });
 });
 
 Auth::routes();
