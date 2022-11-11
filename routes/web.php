@@ -23,6 +23,9 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
     Route::get('dashboard', [AdminHomeController::class, 'index'])->name('admin.dashboard');
     Route::prefix('brand')->group(function(){
         Route::get('/', [AdminBrandController::class, 'index'])->name('admin.brand');
+        Route::get('tambah', [AdminBrandController::class, 'tambah'])->name('admin.brand.tambah');
+        Route::post('simpan', [AdminBrandController::class, 'simpan'])->name('admin.brand.simpan');
+        Route::get('matikan/{id}', [AdminBrandController::class, 'toogle'])->name('admin.brand.matikan');
     });
 });
 

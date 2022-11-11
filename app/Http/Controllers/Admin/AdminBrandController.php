@@ -11,4 +11,17 @@ class AdminBrandController extends Controller
     {
         return view('admin.brand.index');
     }
+
+    public function tambah()
+    {
+        return view('admin.brand.tambah');
+    }
+
+    public function simpan(Request $request)
+    {
+        $brand = new Brand();
+        $brand->nama_brand = $request->nama;
+        $brand->save();
+        return redirect()->route('admin.brand');
+    }
 }
