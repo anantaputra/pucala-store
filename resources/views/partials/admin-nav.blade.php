@@ -112,7 +112,11 @@
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+              
+              <form action="{{ route('logout') }}" method="post" id="form-logout">
+                @csrf
+              </form>
+              <a href="javascript:;" onclick="document.querySelector('#form-logout').submit()" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
                 <span class="d-sm-inline d-none">Sign In</span>
               </a>
