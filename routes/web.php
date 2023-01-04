@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\AdminProdukController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('shop', [HomeController::class, 'shop'])->name('shop');
 
 // admin
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function(){
